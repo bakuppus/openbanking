@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="openbanking-accounts-api-test-suite.xml" />
+	<munit:test name="openbanking-accounts-api-test-suite-get:\accounts\(accountId)\balances:openbanking-accounts-api-configTest" doc:id="a217f12d-7375-4e35-81ae-a3e75908224e" description="Test">
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="a628818c-04dd-48ee-aa85-a7f20b9610fa" >
+				<munit:attributes value="#[{uriParams:{accountId:'22289'}}]" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to get:\accounts\(accountId)\balances:openbanking-accounts-api-config" doc:id="b18bed3e-21e8-4869-a36f-39e0614a43d9" name="get:\accounts\(accountId)\balances:openbanking-accounts-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="cf16931a-1697-4e52-be1b-b7919c77f157" expression="#[payload]" is="#[MunitTools::notNullValue()]" message="Payload is empty"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="openbanking-accounts-api-test-suite-get:\accounts:openbanking-accounts-api-configTest" doc:id="1c3cb689-0bce-439a-ad03-9c44788aad00" description="Test">
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="d945c1c6-dfe6-4673-bbd6-591e4604e19e" >
+				<munit:attributes value="#[{headers:{CustomerId:'23455'}}]" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to get:\accounts:openbanking-accounts-api-config" doc:id="b9e05630-eebb-4e0e-b036-9859de333f56" name="get:\accounts:openbanking-accounts-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="37f880d0-a155-4420-aeb0-b729d6057d3b" is="#[MunitTools::withMediaType('application/json')]" message="Response is not json" expression="#[payload]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="openbanking-accounts-api-test-suite-get:\accounts\(accountId)\statements:openbanking-accounts-api-configTest" doc:id="42446421-c3f9-4721-9300-b44ffa72312a" description="Test">
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="617816c6-3183-43da-ba46-ab8f6a66ed86" >
+				<munit:attributes value="#[{uriParams:{accountId:'22289'}}]" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to get:\accounts\(accountId)\statements:openbanking-accounts-api-config" doc:id="f4e012e3-b30a-4169-b211-40b0016024cf" name="get:\accounts\(accountId)\statements:openbanking-accounts-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="d131bedc-616b-4331-af5e-a1f35432a834" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="openbanking-accounts-api-test-suite-get:\accounts\(accountId)\transactions:openbanking-accounts-api-configTest" doc:id="e7896808-8bc8-42fb-8e67-b7e76943bc3c" description="Test">
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="487ebdbb-97fa-4080-8d58-d8b74223421a" >
+				<munit:attributes value="#[{uriParams:{accountId:'22289'}}]" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to get:\accounts\(accountId)\transactions:openbanking-accounts-api-config" doc:id="f1b38024-7df6-4705-a12f-f863b1cce69d" name="get:\accounts\(accountId)\transactions:openbanking-accounts-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="6a5adb30-65dd-4ec2-8249-29103c5d58b7" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="openbanking-accounts-api-test-suite-get:\accounts\(accountId):openbanking-accounts-api-configTest" doc:id="56ebae4e-2590-4a1e-96f5-f1dc87aaf77e" description="Test">
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="eb251baf-c5dd-41d7-873d-a996221cbb78" >
+				<munit:attributes value="#[{uriParams:{accountId:'22289'}}]" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to get:\accounts\(accountId):openbanking-accounts-api-config" doc:id="87a138fb-da31-44fb-a20c-3e88bc5811e7" name="get:\accounts\(accountId):openbanking-accounts-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="45f89062-7b97-4618-b2ab-5868fdc0d82b" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
