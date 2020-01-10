@@ -11,14 +11,6 @@ pipeline
 			}
 		}
 		
-		stage ('MuleSoft Open Banking API - Unit Testing (MUnit)')
-		{
-			steps
-			{
-			bat 'mvn test'
-			}
-		}
-		
 		stage ('MuleSoft Open Banking API - Deploy To Nexus (Code Artifactory)')
 		{	
 			steps
