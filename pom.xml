@@ -16,7 +16,7 @@
 		<munit.version>2.2.1</munit.version>
     </properties>
 
-	
+<profiles>	
 <profile>
   <id>cloudhub</id>
 	<build>
@@ -54,7 +54,7 @@
 				</plugins>
 			</build>
 		</profile>
-
+	</profiles>
 
 	<dependencies>
 		<dependency>
