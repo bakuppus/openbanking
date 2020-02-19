@@ -34,11 +34,6 @@
 						<workers>1</workers>
 						<environment>BalaSandbox</environment>
 						<muleVersion>4.2.2</muleVersion>
-						<applicationName>openbanking-api-service</applicationName>
-						<objectStoreV2>true</objectStoreV2>
-						<properties>
-							<ob.http.port>8081</ob.http.port>
-						</properties>
 					</cloudHubDeployment>
 				</configuration>
 						<executions>
