@@ -6,11 +6,6 @@ pipeline {
         sh 'which mvn'
       }
     }
-    stage('Deploy Standalone') {
-      steps {
-        sh 'mvn deploy -P standalone'
-      }
-    }
     stage('Deploy ARM') {
       environment {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
