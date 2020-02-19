@@ -171,9 +171,6 @@
 						</executions>
 					</plugin>
 				</plugins>
-			</build>
-		</profile>
-
 		
 
 			<id>release</id>
