@@ -29,7 +29,7 @@
 						<password>Bala123%%%</password>
 						<workerType>Micro</workerType>
 						<workers>1</workers>
-						<environment>Sandbox</environment>
+						<environment>BalaSandbox</environment>
 						<muleVersion>4.2.2</muleVersion>
 						<applicationName>openbanking-api-service</applicationName>
 						<objectStoreV2>true</objectStoreV2>
