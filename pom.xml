@@ -25,8 +25,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<username>jitu85</username>
-						<password>Jitu@12345</password>
+						<username>bakuppus</username>
+						<password>Bala123%%%</password>
 						<workerType>Micro</workerType>
 						<workers>1</workers>
 						<environment>Sandbox</environment>
