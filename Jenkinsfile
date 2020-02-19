@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Unit Test') {
       steps {
-        sh 'id'
+        sh 'which mvn'
       }
     }
     stage('Deploy Standalone') {
